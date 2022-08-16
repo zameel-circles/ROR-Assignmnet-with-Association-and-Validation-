@@ -1,5 +1,5 @@
 <%= link_to 'Remove', @service, method: :delete, data: { confirm: 'Are you sure?' } %>
 
 <h1><%= @service.service %></h1>
-<h4>"<%= @service.price%>"</h4>
-<h4>"<%= @service.working_hours%>"</h4>
+<h4>Price: <%= @service.price%></h4>
+<h4>Working Hours: <%= @service.working_hours%></h4>
