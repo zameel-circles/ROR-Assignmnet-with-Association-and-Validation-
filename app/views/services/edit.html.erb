@@ -1,0 +1,9 @@
+<h3>Update Service Details</h3>
+<%= form_with model: @service do |form| %>
+  <%= form.text_field :service, placeholder: "service name" %>
+  <%= form.number_field :price, placeholder: "price" %>
+  <%= form.number_field :working_hours, placeholder: "working hours" %>
+
+  <p>Store: <%= form.select :store_id, Store.all.map { |store| [ store.to_s, store.id ] } %></p>
+  <%= form.submit %>
+<% end %>

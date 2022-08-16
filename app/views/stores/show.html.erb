@@ -1,0 +1,16 @@
+<h1><%= @store.to_s %></h1>
+<%= link_to 'Edit', edit_store_path(@store) %>
+
+<p><b>Name:</b> <%= @store.name %></p>
+<p><b>Address:</b> <%= @store.address %></p>
+
+
+<h3>Services</h3>
+<ul>
+  <% @store.services.each do |service| %>
+  <li><%= link_to service.service, service_path(service) %></li>
+  <% end %>
+</ul><br>
+
+<p><%= link_to 'Delete', @store, method: 'delete', data: { confirm: 'Are you sure?' }%></p>
+<p><%= link_to 'Go back to all stores', stores_path %></p>

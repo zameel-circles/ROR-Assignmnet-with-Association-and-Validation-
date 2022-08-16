@@ -1,0 +1,8 @@
+<h1>List of Stores</h1>
+<ul><% @stores.each do |store| %>
+  <li>
+    <%= link_to store.to_s, store_path(store) %>
+  <% end %></li>
+</ul>
+
+<div><%= link_to 'Create Store', new_store_path %></div>

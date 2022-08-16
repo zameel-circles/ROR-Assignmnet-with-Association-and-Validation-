@@ -1,0 +1,9 @@
+<table>
+  <% @services.each do |service| %>
+    <tr>
+      <td><%= link_to service.service, service_path(service) %></td>
+      <td><%= button_to 'Edit', edit_service_path(service), method: 'get'%></td>
+      <td><%= button_to 'Remove', service_path(service), method: 'delete', data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
+</table>
+<%= link_to "Add a New Service", new_service_path %>
